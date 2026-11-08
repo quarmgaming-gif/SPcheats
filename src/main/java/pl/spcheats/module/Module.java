@@ -7,12 +7,14 @@ import java.util.List;
 
 public abstract class Module {
     public final String name;
+    public final String category;
     public final String description;
     public final List<NumberSetting> settings = new ArrayList<>();
     private boolean enabled;
 
-    protected Module(String name, String description, boolean enabledByDefault) {
+    protected Module(String name, String category, String description, boolean enabledByDefault) {
         this.name = name;
+        this.category = category;
         this.description = description;
         this.enabled = enabledByDefault;
     }

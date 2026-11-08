@@ -8,8 +8,8 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
 import pl.spcheats.gui.ClickGuiScreen;
-import pl.spcheats.module.ElytraAlertModule;
 import pl.spcheats.module.ModuleManager;
+import pl.spcheats.util.AlertHud;
 
 public class SPcheatsClient implements ClientModInitializer {
     public static KeyBinding openGuiKey;
@@ -34,6 +34,6 @@ public class SPcheatsClient implements ClientModInitializer {
             ModuleManager.tick(client);
         });
 
-        HudRenderCallback.EVENT.register((context, tickCounter) -> ElytraAlertModule.INSTANCE.renderHud(context));
+        HudRenderCallback.EVENT.register((context, tickCounter) -> AlertHud.render(context));
     }
 }

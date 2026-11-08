@@ -9,7 +9,13 @@ public class ModuleManager {
     public static final List<Module> MODULES = new ArrayList<>();
 
     public static void init() {
+        MODULES.add(KillAuraModule.INSTANCE);
+        MODULES.add(AutoTrapModule.INSTANCE);
+        MODULES.add(AutoWebModule.INSTANCE);
+        MODULES.add(AutoDripstoneModule.INSTANCE);
+        MODULES.add(FreecamModule.INSTANCE);
         MODULES.add(ElytraAlertModule.INSTANCE);
+        MODULES.add(TrapAlertModule.INSTANCE);
     }
 
     public static void tick(MinecraftClient client) {
