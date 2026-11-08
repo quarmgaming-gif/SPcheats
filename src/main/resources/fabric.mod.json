@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "spcheats",
+  "version": "${version}",
+  "name": "SPcheats",
+  "description": "SPcheats - biale menu i moduly.",
+  "authors": ["SP"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["pl.spcheats.SPcheatsClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
